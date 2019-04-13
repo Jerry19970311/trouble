@@ -8,3 +8,7 @@ git 更换远程地址：git remote add origin http://10.00.3.260:10080/xxxxxx/s
 来源：CSDN 
 原文：https://blog.csdn.net/private66/article/details/84847623 
 版权声明：本文为博主原创文章，转载请附上博文链接！
+
+2，github文件仓库教程：https://blog.csdn.net/skyejy/article/details/78162902
+
+3，push失败教程：https://blog.csdn.net/michael10001/article/details/51371715
