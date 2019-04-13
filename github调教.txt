@@ -16,3 +16,8 @@ git 更换远程地址：git remote add origin http://10.00.3.260:10080/xxxxxx/s
 4，Git 基础 - 记录每次更新到仓库：https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93
 
 5，查看状态：git status
+
+6，提交三连：
+git add -A
+git commit -m "message"【引号处随意】
+git push -u origin master 【最后加-f是强制提交，慎用】
