@@ -1,0 +1,13 @@
+1，Error: JAVA_HOME is not set and could not be found.
+
+/etc/hadoop/hadoop-env.sh文件添加：
+export JAVA_HOME=【Java配置路径】
+
+2，启动和终止守护进程
+start-dfs.sh
+start-yarn.sh
+mr-jobhistory-daemon.sh start historyserver
+
+mr-jobhistory-daemon.sh stop historyserver
+stop-yarn.sh
+stop-dfs.sh

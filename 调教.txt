@@ -1,0 +1,29 @@
+1，开始菜单应用不显示？（PowerShell）
+Get-AppxPackage -AllUsers| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
+2，开机启动项：任务管理器->【启动】选项卡
+
+3，修改本地DNS服务器：http://jingyan.baidu.com/article/624e7459b194f134e8ba5a8e.html
+
+4，无法进入BIOS：查看是否开启了快速启动？
+
+5，http://jingyan.baidu.com/article/54b6b9c0f338002d593b4777.html
+
+6，关于SQLServer2016：
+
+媒体位置：D:\SQLServer2016Media
+实例根目录：D:\Program Files\Microsoft SQL Server\
+共享功能目录：
+C:\Program Files\Microsoft SQL Server\
+C:\Program Files (x86)\Microsoft SQL Server\
+sa密码：12345678
+Distributed Replay工作目录：D:\Program Files (x86)\Microsoft SQL Server\DReplayClient\WorkingDir\
+Distributed Replay结果目录：D:\Program Files (x86)\Microsoft SQL Server\DReplayClient\ResultDir\
+配置文件：C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\20170923_135411\ConfigurationFile.ini
+
+7，查看占用某个端口的PID？
+netstat -ano
+
+8，没有新建文件夹选项？
+命令提示符：
+cmd /k reg add "HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\New" /ve /t REG_SZ /d {D969A300-E7FF-11d0-A93B-00A0C90F2719} /f

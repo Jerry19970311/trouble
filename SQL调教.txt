@@ -1,0 +1,15 @@
+1，MD5加密出现乱码？
+hashbytes函数处理后数据类型为byte，如果存入char的变量就会出现乱码。
+解决方法：
+hashbytes前用sys.fn_sqlvarbasetostr函数括起来（SQLServer2008以后可用Convert函数代替）
+（引用资料：https://www.cnblogs.com/JuneZhang/p/6396896.html?utm_source=itdadao&utm_medium=referral）
+
+2，对用户授权只能读取某个表中的部分字段？
+GRANT SELECT(【允许的字段】) ON 【表】 TO 【用户】
+
+3，MySQL查看正在使用的端口？（默认3066）
+show global variables like 'port';
+
+4，MySQL所有的存储引擎均不支持check约束，MySQL会对check子句进行分析，但是在插入数据时会忽略，因此check并不起作用，因此实现对数据约束有两种方法：
+a：在mysql种约束，如使用enum类型或者触发器等。
+b：在应用程序里面对数据进行检查再插入。 

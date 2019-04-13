@@ -1,0 +1,9 @@
+1，改变所有者（chown）和用户组（chgrp）命令
+
+chown xiaoming abc：改变abc的所有者为xiaoming
+
+chgrp root abc：改变abc所属的组为root
+
+chown root ./abc：改变abc这个目录的所有者是root
+
+chown ‐R root ./abc：改变abc这个目录及其下面所有的文件和目录的所有者是root
