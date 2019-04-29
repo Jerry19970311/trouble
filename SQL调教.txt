@@ -13,3 +13,24 @@ show global variables like 'port';
 4，MySQL所有的存储引擎均不支持check约束，MySQL会对check子句进行分析，但是在插入数据时会忽略，因此check并不起作用，因此实现对数据约束有两种方法：
 a：在mysql种约束，如使用enum类型或者触发器等。
 b：在应用程序里面对数据进行检查再插入。 
+
+5，mysql在Linux上初始化时出现错误：
+error while loading shared libraries: libaio.so.1: cannot open shared object file
+解决方法：yum install -y libaio （需要安装libaio）
+
+6，Linux安装MySQL的傻瓜教程（https://www.cnblogs.com/wlwl/p/9686809.html）：
+yum remove mariadb-libs.x86_64
+mkdir /etc/mysql
+wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm  
+yum search mysql
+yum install mysql-community-server
+查看初始密码：
+cat /var/log/mysqld.log | grep password
+登陆：
+mysql -u root -p（然后输入密码）
+修改密码：
+set global validate_password.policy=0;
+set global validate_password.length=1;
+ALTER USER "root"@"localhost" IDENTIFIED  BY "1234";
+退出：
+exit
